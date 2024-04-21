@@ -1,0 +1,60 @@
+@import "../../../assets/theme/_var.scss";
+
+.order_card {
+  padding: 16px;
+  @include theme-aware("box-shadow", "boxShadow2");
+  @include theme-aware("background-color", "cardBg");
+  border-radius: 16px;
+  position: relative;
+  height: 100%;
+
+  @media (max-width: 1199px) {
+    height: auto;
+  }
+
+  h3 {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21px;
+    @include theme-aware("color", "inputText");
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  &_inner {
+    h4 {
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 400;
+      margin-bottom: 16px;
+      font-family: $baseFont;
+      @include theme-aware("color", "inputText");
+    }
+
+    .common_tabs {
+      .nav {
+        flex-wrap: nowrap;
+
+        .nav-item {
+          .nav-link {
+            @media (max-width: 1679px) {
+              font-size: 12px;
+              padding: 10px 8px;
+            }
+          }
+        }
+      }
+
+      .tab-content {
+        padding-bottom: 0;
+
+        .coming__soon {
+          img {
+            max-width: 60px;
+          }
+        }
+      }
+    }
+  }
+}

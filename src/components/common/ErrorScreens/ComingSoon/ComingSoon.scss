@@ -1,0 +1,29 @@
+@import "../../../../assets/theme/_var.scss";
+
+.coming__soon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 200px;
+
+  svg {
+    width: 60px;
+    height: auto;
+
+    path {
+      @include theme-aware("fill", "textClr");
+    }
+  }
+
+  h4 {
+    font-size: 24px !important;
+    margin-top: 20px;
+    line-height: 1.2 !important;
+    text-align: center;
+
+    @media (max-width: 1199px) {
+      font-size: 24px !important;
+    }
+  }
+}

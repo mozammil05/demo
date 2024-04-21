@@ -1,0 +1,53 @@
+// @import "../../../../assets/theme/_var.scss";
+// @import "../../../../assets/theme/_mixins.scss";
+.recharts-tooltip-wrapper{
+  outline: none;
+}
+
+.custom_tooltip {
+  .custom_tooltip_time {
+    font-family: Poppins;
+    font-size: 14px;
+    // @include theme() {
+    //   color: theme-get("linkActvie");
+    // }
+    margin-bottom: -2px;
+    .box_view {
+      width: 8px;
+      height: 8px;
+      background-color: green;
+      margin-right: 6px;
+      display: inline-block;
+    }
+    &.treasury_date {
+      font-weight: 600;
+      line-height: 21px;
+      font-family: Poppins;
+    }
+    &.treasury_blnc {
+      font-size: 13px;
+      line-height: 18px;
+      div {
+        margin-top: 4px !important;
+        font-family: Poppins;
+        // @include theme() {
+        //   color: theme-get("swapbtnclr");
+        // }
+        @media (max-width: 767px) {
+          margin-top: 2px !important;
+        }
+        .font_fm {
+          font-family: Poppins;
+          font-weight: 600;
+          // @include theme() {
+          //   color: theme-get("linkActvie");
+          // }
+        }
+      }
+    }
+  }
+  .custom_tooltip_fluctuate {
+    // @extend %commissioner;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../../assets/theme/_var.scss";
+
+.dashboard_page {
+  >.row {
+    margin: 0 -12px;
+
+    >div {
+      padding: 0 12px 24px;
+    }
+  }
+}
+
+.tv_chart_container {
+  height: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  @include theme-aware("box-shadow", "boxShadow2");
+  @include theme-aware("background-color", "cardBg");
+
+  @media (max-width: 767px) {
+    height: 300px;
+  }
+
+  iframe {
+    height: 100%;
+  }
+}

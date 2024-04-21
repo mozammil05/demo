@@ -1,0 +1,11 @@
+@import '../../../../assets/theme/_var.scss';
+
+.error-msg {
+    font-size: 14px;
+    color: rgb(255, 73, 74);
+    @include theme-aware('color', 'dangerClr');
+
+    @media (max-width: 575px) {
+        font-size: 13px;
+    }
+}

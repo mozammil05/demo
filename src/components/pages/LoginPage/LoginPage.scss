@@ -1,0 +1,60 @@
+@import '../../../assets/theme/_var.scss';
+
+.login_page {
+    min-height: 100vh;
+    background-image: url('../../../assets/imgs/background/background-blue.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 70px 0;
+
+    @media (max-width: 991px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &_details {
+        max-width: 600px;
+        margin-left: 11.3%;
+
+        .login_logo {
+            max-width: 260px;
+        }
+
+        .login_details_inner {
+            margin-top: 48px;
+
+            h2 {
+                font-weight: 300;
+                line-height: 1.2;
+                font-size: 30px;
+                margin-bottom: 8px;
+                color: white;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            p {
+                font-family: $headingFont;
+                margin: 32px 0;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 21px;
+                color: white;
+            }
+
+            a {
+                &.bordered {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        padding: 35px 0;
+    }
+}

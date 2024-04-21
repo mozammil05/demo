@@ -1,0 +1,30 @@
+@import "../../../../assets/theme/_var.scss";
+
+.coming_soon_page {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (max-width: 991px) {
+    min-height: calc(100vh - 110px);
+  }
+
+  &_inner {
+    margin-bottom: 30px;
+
+    svg {
+      width: 100px;
+      height: auto;
+
+      path {
+        @include theme-aware("fill", "textClr");
+      }
+    }
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+}

@@ -1,0 +1,187 @@
+@import "./assets/theme/_var.scss";
+@import "/node_modules/react-grid-layout/css/styles.css";
+@import "/node_modules/react-resizable/css/styles.css";
+body {
+  font-family: $baseFont;
+  @include theme-aware("background-color", "bodyBg");
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,
+span {
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: $headingFont;
+  margin-bottom: 0;
+  @include theme-aware("color", "textClr");
+}
+
+p,
+.form-label {
+  margin-bottom: 0;
+  @include theme-aware("color", "textClr");
+}
+
+.tv_chart_container {
+  width: 100%;
+
+  iframe {
+    width: 100%;
+  }
+}
+
+// ::-webkit-input-placeholder {
+//   /* Edge */
+//   padding-right: 10px !important;
+// }
+
+// :-ms-input-placeholder {
+//   /* Internet Explorer 10-11 */
+//   padding-right: 10px !important;
+// }
+
+// ::placeholder {
+//   padding-right: 10px !important;
+// }
+
+.custom_toast {
+  .Toastify__toast-theme--light {
+    background: linear-gradient(
+      160deg,
+      rgb(81, 103, 235),
+      rgb(81, 103, 235),
+      rgb(69, 89, 202),
+      rgb(48, 65, 161)
+    );
+    @include theme-aware("background", "gradient");
+    color: #fff;
+    height: auto;
+    font-family: $baseFont;
+    font-size: 20px;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.modal_close_btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 8px;
+  border: 1px solid;
+  @include theme-aware("background-color", "closeBtn");
+  @include theme-aware("border-color", "closeBtnBorder");
+  transition: 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+// Tooltip
+.info_icon {
+  width: 20px;
+  height: 20px;
+  @include theme-aware("background-color", "baseColor500");
+  border-radius: 50%;
+  padding: 0;
+  position: relative;
+  cursor: pointer;
+  z-index: 9;
+
+  svg {
+    transform: translate(1px, -1px);
+    @include theme-aware("fill", "whiteClr");
+  }
+
+  .tooltip {
+    position: absolute;
+    top: -5px;
+    left: calc(100% + 10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 300ms ease-in-out;
+    @include theme-aware("background-color", "baseColor");
+    width: max-content;
+    z-index: 10;
+    border-radius: 10px;
+    max-width: 200px;
+
+    &::after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 10px;
+      right: 100%;
+      border-right: 6px solid transparent;
+      @include theme-aware("border-right-color", "baseColor");
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+    }
+
+    p {
+      @include theme-aware("color", "whiteClr");
+      font-size: 12px;
+    }
+  }
+
+  &:hover {
+    .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__secTooltip {
+
+  background-color: transparent !important;
+  width: fit-content;
+  cursor: auto;
+
+  span {
+    @include theme-aware("color", "whiteClr");
+  }
+  }
+}
+
+

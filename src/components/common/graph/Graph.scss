@@ -1,0 +1,85 @@
+@import "../../../assets/theme/_var.scss";
+@import "../../../assets/theme/_mixins.scss";
+// .graphStyle {
+//   width: 100% !important;
+//   height: 100% !important;
+//   .dwm {
+//     width: 100%;
+//   }
+// }
+
+.recharts-responsive-container {
+  .recharts-layer {
+    tspan {
+      @include theme() {
+        fill: theme-get("linkColor");
+        line-height: 21px;
+      }
+      @media (max-width: 767px) {
+        font-size: 11px;
+      }
+    }
+    &.recharts-area{ 
+      
+    }
+    &.recharts-cartesian-axis.recharts-xAxis{
+      transform: translate(0px, 8px);
+      @extend %commissioner;
+    }
+  }
+}
+
+.custom-tooltip {
+  .intro {
+    @include theme() {
+      color: theme-get("darkBg");
+    }
+  }
+  
+}
+
+///@at-root
+
+.custom_shimmer.graph_skel {
+  width: 100%; border-radius: 20px;
+  height: 380px;
+}
+
+.recharts-responsive-container.earn_graph{
+  height: 300px !important;
+  @media (max-width:767px) {
+    height: 120px !important;
+  }
+}
+
+g.recharts-layer.recharts-scatter {
+  // transform: translate(0px, 34px);
+}
+.earning_graph .recharts-responsive-container .recharts-layer tspan {
+  @include theme() {
+      fill: theme-get("linkActvie");
+    }
+}
+
+.straight_class{
+  // background-color: red;
+  .recharts-area{
+    g.recharts-layer{
+      position: relative;
+      &::before{
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 0;
+        bottom: 2px;
+        width: 100%;
+        height: 10px;
+        background-color: #000 !important;
+        z-index: 999;
+      }
+      path{
+        background-color: red !important;
+      }
+    }
+  }
+}

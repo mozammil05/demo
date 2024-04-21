@@ -1,0 +1,154 @@
+@font-face {
+  font-family: Poppins;
+  src: local("Poppins"), url("../fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Poppins;
+  src: local("Poppins"), url("../fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Poppins;
+  src: local("Poppins"), url("../fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Poppins;
+  src: local("Poppins"), url("../fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: Poppins;
+  src: local("Poppins"),
+    url("../fonts/Poppins-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+// fonts
+$headingFont: "Poppins", sans-serif;
+$baseFont: "Poppins", sans-serif;
+
+// Colors
+
+$white: #fff;
+$white240: #f0f0f0;
+$black: #000;
+// $baseColor: #5167eb;
+// $baseHoverColor: #1b9ad4;
+// $secondaryColor: #6cc8ef;
+// $secondaryColorHover: #61c6d8;
+// $boxShadow: 0 6px 10px rgb(0 0 0 / 10%);
+// $boxShadow2: 0 4px 10px rgb(0 0 0 / 3%);
+// $inputBg: rgb(248, 248, 248);
+// $inputText: #4e4e4e;
+// $green: rgb(61, 67, 67);
+// $gradient: linear-gradient(160deg, #5167eb, #5167eb, #4559ca, #3041a1);
+// $bodyBg: #f9f9f9;
+// $borderClr: #dee2e6;
+// $borderClr2: #dddddd;
+// $textMuted: #afafaf;
+// $tableFontColor: #7c7c7c;
+// $dangerClr: rgb(255, 73, 74);
+// $dangerClrDark: rgb(207, 53, 53);
+
+// transition
+%transition {
+  transition: 300ms ease-in-out all;
+}
+
+$themes: (
+  light: (
+    blackClr: rgb(0, 0, 0),
+    whiteClr: rgb(255, 255, 255),
+    textClr: rgb(0, 0, 0),
+    baseColor: #5269eb,
+    baseColor500: #5167eb80,
+    baseHoverColor: #293994,
+    secondaryColor: #6cc8ef,
+    secondaryColorHover: #4e95a1,
+    boxShadow: 0 6px 10px rgba(0, 0, 0, 0.1),
+    boxShadow2: 0 4px 10px rgb(0 0 0 / 3%),
+    boxShadowInset: inset 0 0 0 1px rgba(61, 67, 67, 0.6),
+    boxShadowInsetBaseClr: inset 0 0 0 1px rgb(81, 103, 235),
+    inputBg: rgb(248, 248, 248),
+    inputText: rgb(78, 78, 78),
+    lightGreenClr: rgb(44, 155, 44),
+    greenClr: rgb(61, 67, 67),
+    green600: rgba(61, 67, 67, 0.6),
+    green0600: rgba(61, 67, 67, 0.06),
+    green100: rgba(61, 67, 67, 0.1),
+    green200: rgba(61, 67, 67, 0.2),
+    gradient:
+      linear-gradient(
+        160deg,
+        rgb(81, 103, 235),
+        rgb(81, 103, 235),
+        rgb(69, 89, 202),
+        rgb(48, 65, 161)
+      ),
+    bodyBg: rgb(249, 249, 249),
+    cardBg: rgb(255, 255, 255),
+    borderClr: rgb(222, 226, 230),
+    borderClr2: rgb(221, 221, 221),
+    textMuted: rgb(175, 175, 175),
+    tableFontColor: rgb(124, 124, 124),
+    dangerClr: rgb(255, 73, 74),
+    dangerClrDark: rgb(207, 53, 53),
+    closeBtn: rgba(#000, 0.06),
+    closeBtnBorder: rgba(#000, 0.04),
+    modalBg: rgb(255, 255, 255),
+    modalBorder: rgb(255, 255, 255),
+    shimmerClr: rgba(146, 155, 160, 0.635),
+  ),
+  dark: (
+    blackClr: rgb(0, 0, 0),
+    whiteClr: rgb(255, 255, 255),
+    gradient:
+      linear-gradient(
+        160deg,
+        rgb(19, 14, 57),
+        rgb(19, 14, 57),
+        rgb(32, 23, 99),
+        rgb(34, 23, 116)
+      ),
+    baseColor: #5167eb,
+    baseColor500: rgb(81, 103, 235, 0.5),
+    bodyBg: rgb(33, 37, 41),
+    baseHoverColor: rgb(41, 57, 148),
+    secondaryColor: rgb(108, 200, 239),
+    secondaryColorHover: rgb(78, 149, 161),
+    cardBg: #1b1a1a,
+    lightGreenClr: rgb(44, 155, 44),
+    textClr: rgb(226, 220, 220),
+    inputText: rgb(248, 248, 248),
+    inputBg: rgb(58, 53, 53),
+    tableFontColor: rgb(248, 248, 248),
+    dangerClr: rgb(255, 73, 74),
+    dangerClrDark: rgb(207, 53, 53),
+    greenClr: rgb(61, 67, 67),
+    green600: rgba(225, 235, 235, 0.753),
+    green0600: rgba(254, 255, 255, 0.13),
+    green100: rgba(61, 67, 67, 0.1),
+    green200: rgba(61, 67, 67, 0.2),
+    boxShadow: 0 6px 10px rgba(0, 0, 0, 0.1),
+    boxShadow2: 0 4px 10px rgb(0 0 0 / 3%),
+    boxShadowInset: inset 0 0 0 1px rgba(61, 67, 67, 0.6),
+    boxShadowInsetBaseClr: inset 0 0 0 1px rgb(81, 103, 235),
+    borderClr2: rgba(148, 148, 150, 0.2),
+    borderClr: rgb(107, 107, 112),
+    closeBtn: rgba(rgb(255, 255, 255), 0.8),
+    closeBtnBorder: rgb(255, 255, 255),
+    modalBg: rgb(26, 21, 21),
+    modalBorder: rgb(74, 69, 71),
+    shimmerClr: rgba(41, 49, 53, 0.941),
+    textMuted: rgb(84, 84, 84),
+  ),
+);
+
+@mixin theme-aware($key, $color) {
+  @each $theme-name, $theme-color in $themes {
+    .theme-#{$theme-name} & {
+      #{$key}: map-get(map-get($themes, $theme-name), $color);
+    }
+  }
+}

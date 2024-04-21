@@ -1,0 +1,104 @@
+@import "../../../../assets/theme/_var.scss";
+
+.customDropdown {
+  .dropdown {
+    .dropdown-toggle {
+      box-shadow: none;
+      background-color: transparent;
+      border-radius: 10px;
+      border: 1px solid;
+      @include theme-aware("border-color", "borderClr");
+      display: flex;
+      align-items: center;
+      height: 44px;
+      max-width: 100%;
+      // width: 100%;
+
+      &:disabled {
+        @include theme-aware("background-color", "green200");
+        @include theme-aware("border", "green0600");
+      }
+
+      .toggle_inner {
+        @include theme-aware("color", "textClr");
+        font-size: 14px;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        img {
+          max-width: 24px;
+          margin-right: 4px;
+        }
+      }
+
+      svg {
+        @include theme-aware("fill", "borderClr");
+      }
+
+      &::after {
+        content: unset;
+      }
+
+      &.show {
+        @include theme-aware("border-color", "baseColor");
+
+        svg {
+          @include theme-aware("fill", "baseColor");
+        }
+      }
+
+      .dropdown_icon {
+        margin-left: 10px;
+      }
+    }
+
+    .dropdown-menu {
+      border-radius: 10px;
+      border: 1px solid;
+      @include theme-aware("border-color", "baseColor");
+      margin-top: 10px;
+      @include theme-aware("background-color", "cardBg");
+
+      .dropdown-item {
+        padding: 10px 12px;
+        overflow: hidden;
+        font-size: 14px;
+        text-overflow: ellipsis;
+        @include theme-aware("color", "textClr");
+
+        &.active {
+          opacity: 0.4;
+          // filter: brightness(0.5) grayscale(1);
+          @include theme-aware("color", "textClr");
+        }
+
+        &.active,
+        &:active,
+        &:hover,
+        &:focus {
+          @include theme-aware("color", "baseColor");
+          background-color: transparent;
+        }
+
+        img {
+          max-width: 24px;
+          margin-right: 4px;
+        }
+      }
+
+      .menu_last_item {
+        border-top: 1px solid;
+        @include theme-aware("border-color", "borderClr");
+      }
+    }
+  }
+
+  &.small {
+    .dropdown {
+      .dropdown-toggle {
+        height: 38px;
+      }
+    }
+  }
+}

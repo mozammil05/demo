@@ -1,0 +1,162 @@
+@import "../../../assets/theme/_var.scss";
+
+.common_table {
+  .table-responsive {
+    &::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(82, 105, 235);
+      @include theme-aware("background-color", "baseColor");
+      border-radius: 18px;
+    }
+  }
+
+  .table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+
+  th {
+    cursor: pointer;
+    @include theme-aware("background-color", "baseColor");
+
+    &:first-child {
+      border-radius: 10px 0 0 10px;
+    }
+
+    &:last-child {
+      border-radius: 0 10px 10px 0;
+    }
+
+    p {
+      @include theme-aware("color", "whiteClr");
+      line-height: 21px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .arrows {
+      display: flex;
+      align-items: center;
+
+      span {
+        max-width: 16px;
+
+        svg {
+          width: 18px;
+          height: auto;
+
+          path {
+            @include theme-aware("fill", "whiteClr");
+          }
+        }
+
+        &.active {
+          svg {
+            path {
+              // @include theme-aware('fill', 'blackClr');
+              fill: rgb(18, 24, 57);
+            }
+          }
+        }
+      }
+
+      .down_arrow {
+        transform: rotate(180deg) translateY(-2px) translateX(-8px);
+      }
+    }
+  }
+
+  td,
+  th {
+    padding: 14px 20px;
+    vertical-align: middle;
+    border: none;
+    white-space: nowrap;
+    @include theme-aware("color", "tableFontColor");
+  }
+
+  tbody {
+    tr {
+      @include theme-aware("box-shadow", "boxShadow2");
+
+      td {
+        font-size: 14px;
+        line-height: 21px;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        transition: background-color 1.2s ease-in-out;
+
+        &:first-child {
+          border-radius: 16px 0 0 16px;
+          border-left: 1px solid transparent;
+        }
+
+        &:last-child {
+          border-radius: 0 16px 16px 0;
+          border-right: 1px solid transparent;
+        }
+
+        &.underline {
+          text-decoration: underline;
+        }
+      }
+
+      &:hover {
+        td {
+          @include theme-aware("border-color", "borderClr");
+        }
+      }
+
+      &.no_record {
+        box-shadow: none;
+
+        td {
+          border: none;
+          text-align: center;
+
+          &:hover {
+            border: none;
+          }
+
+          svg {
+            max-width: 40px;
+            margin: 10px 0;
+
+            path {
+              @include theme-aware("fill", "green600");
+            }
+
+            @media (max-width: 767px) {
+              margin: 0;
+            }
+          }
+
+          h4 {
+            @include theme-aware("color", "green600");
+            font-size: 20px;
+
+            @media (max-width: 1199px) {
+              font-size: 18px;
+            }
+
+            @media (max-width: 991px) {
+              font-size: 16px;
+            }
+
+            @media (max-width: 575px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../../assets/theme/_var.scss';
+
+
+@keyframes shimmer {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.shimmer {
+    @include theme-aware('background-color', 'shimmerClr');
+    border-radius: 8px;
+    animation: shimmer 2s infinite ease-out;
+}

@@ -1,0 +1,40 @@
+@import '../../../assets/theme/_var.scss';
+
+.common_tabs {
+    .nav {
+        width: 100%;
+        border-bottom: 1px solid;
+        @include theme-aware('border-bottom-color', 'borderClr');
+        position: relative;
+        z-index: 1;
+
+        .nav-link {
+            border-radius: 10px 10px 0 0;
+            border: 1px solid transparent;
+            padding: 9.6px 16px;
+            font-size: 14px;
+            line-height: 1;
+            @include theme-aware('color', 'inputText');
+            z-index: 2;
+            position: relative;
+            background-color: transparent;
+            top: 1px;
+            height: 100%;
+
+            &.active {
+                @include theme-aware('border-color', 'baseColor');
+            }
+
+            &:hover {
+                &:not(.active) {
+                    @include theme-aware('border-color', 'borderClr');
+                    border-bottom: transparent;
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        padding: 16px 0;
+    }
+}
